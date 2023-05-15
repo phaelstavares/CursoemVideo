@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens que se adaptam sozinhas</h1>
+    <p>Tente abrir esse site em diferentes dispositivos ou simplismente aumente e diminua o tamanho do seu navegador.</p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens-arquivos/imgem-300xpequena.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens-arquivos/imgem-700xmedia.png" type="image/png">
+        <img src="imagens-arquivos/imgem-1000xgrande.png" alt="Imagem Flexível">
+    </picture>
+
+    <h1>Reproduzindo ÁUDIO</h1>
+        <p>Aprendendo a repoduzir áudios em HTML5.</p>
+        <audio preload="metadata" autoplay controls>
+            <source src="midia/meu-audio123.mp3" type="audio/mpeg">
+            <source src="midia/meu-audio123.ogg" type="audio/ogg">
+            <source src="midia/meu-audio123.wav" type="aduio/wav">
+            <!--Não é recomendado usar o .wav ele é um arquivo MUITO pesado-->
+            <p>Seu navegador não consegue reproduzir o áudio.</p>
+            <a href="midia/Know Myself - Patrick Patrikios.mp3">Baixei aqui o áudio</a>
+        </audio>
+
+    <video width="600" poster="" controls autoplay>
+        <source src="midia/meu-video123.mp4" type="video/mp4">
+        <source src="midia/Meu-Video323.webm" type="video/webm">
+        <source src="midia/meu-video223.ogg" type="video/ogg">
+        <p>Seu navegador não consegue reproduzir o vídeo.</p>
+    </video>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/tQyQ9RRxD_w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+</body>
+</html>
