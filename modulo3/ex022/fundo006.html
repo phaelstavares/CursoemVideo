@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imagens de Fundo</title>
+    <title>Fundo fixo de tela</title>
     <style>
         body {
             height: 97vh; /* tamanho da tela do navegador */
@@ -12,14 +12,24 @@
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover; /* O "cover" vai fazer com que a imagem adapte ao tamanho da tela. */
-            /* background-size: contain; 
-            Mostra toda a imagem independente do tamanho da tela.
+            /*  background-size: contain; 
+                Mostra toda a imagem independente do tamanho da tela.
             */
+            background-attachment: fixed;
+            
+            
+            /*  Shorthand - background 
+                color > image > position > repeat > [size] > attachment
+                ("size" não funciona nos navegadores, para funcionar terá que tirar ele da Shorthand e colocar separado no código.)
+                E a Shorthand fica assim:
+            */
+            background: #000000 url('imagens/wallpaper002.jpg') center center no-repeat fixed;
+            background-size: cover;
         }
 
         main {
             background-color: #ffffff;
-            width: 400px;
+            max-width: 400px;
             padding: 10px;
             margin: auto;
             border: 1px solid #0000ff;
