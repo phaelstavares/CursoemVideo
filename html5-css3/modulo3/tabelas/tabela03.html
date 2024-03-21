@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabela</title>
+    <title>Tabelas Grandes</title>
 
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        caption {
+            font-size: 18px;
+            padding: 10px;
+            background-color: #d3d3d3;
+        }
+
         table {
             width: 500px;
+            border-collapse: collapse; /* As linhas separadas vão se juntar e formar uma. */
         }
 
         td, th {
@@ -20,7 +27,7 @@
         }
 
         thead, tfoot {
-            background-color: #808080;
+            background-color: #383838;
             color: #ffffff;
         }
 
@@ -34,17 +41,25 @@
     <!-- 
         ANATOMIA PARA TABELAS GRANDES
         Table:
-            Thead
-            Tbody
-            Tfoot
+            Caption -> Legenda da Tabela
+            Thead   -> Cabeça
+            Tbody   -> Corpo
+            Tfoot   -> Pé
+
+        th -> título
+        td -> dado da tabela
+
+        scope="col" -> os dados estão abaixo (na mesma coluna)
+        scope="row" -> os dados estão na mesma linha (horizontal)
     -->
 
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
                 <th>Posição</th>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>
             </tr>
         </thead>
         <tbody>
@@ -187,7 +202,7 @@
         <tfoot>
             <tr>
                 <th></th>
-                <th>Total de habitantes</th>
+                <th scope="row">Total de habitantes</th>
                 <td class="numero"><strong>210.147.125</strong></td>
             </tr>
         </tfoot>
