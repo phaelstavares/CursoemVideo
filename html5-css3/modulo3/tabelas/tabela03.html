@@ -10,6 +10,14 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        /* 
+            tr:nth-child(odd)  -> tudo que é ÍMPAR
+            tr:nth-child(even) -> tudo que é PAR
+        */
+        tbody > tr:nth-child(2n){ /* de 2 em 2 ele vai colocando a cor cinza */
+            background-color: #d3d3d3;
+        }
+
         caption {
             font-size: 18px;
             padding: 10px;
