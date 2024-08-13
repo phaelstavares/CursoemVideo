@@ -1,0 +1,10 @@
+caracter = input("Digite algo: ")
+
+print("O tipo primivo desse valor é: ", type(caracter))
+print("Só tem espaços? ", caracter.isspace())
+print("É um número? ", caracter.isnumeric())
+print("É alfabético? ", caracter.isalpha())
+print("É alfanumérico? ", caracter.isalnum())
+print("Está em maiúsculas? ", caracter.isupper())
+print("Está em minúsculas? ", caracter.islower())
+print("Está capitalizada? ", caracter.istitle())
